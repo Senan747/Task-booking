@@ -21,7 +21,6 @@
   height: 560px;
   display: flex;
   flex-direction: row;
-  /* position: relative; */
 }
 .navbar {
   padding-top: 20px;
@@ -337,6 +336,9 @@ li {
   line-height: 21px;
   margin-bottom: 4px;
 }
+.inputs > div > label > span {
+  color: red;
+}
 .inputs > div > input {
   width: 80%;
   height: 40px;
@@ -365,7 +367,7 @@ li {
   flex-direction: row;
   align-items: start;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
 }
 .hour-deactive {
   background-color: #eceff2;
@@ -376,7 +378,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  /* margin-right: 20px; */
   font-size: 14px;
   width: 85px;
   height: 55px;
