@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gemunu+Libre:wght@400;700&family=Open+Sans&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Task</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="containers">
+        <div class="alert">
+          <div class="alert-content">
+            <i class="fa-solid fa-xmark"></i>
+
+            <span class="text">Please, fill the all required fields!!</span>
+          </div>
+        </div>
+        <div class="completed">
+          <div class="completed-content">
+            <i class="fa-solid fa-xmark"></i>
+
+            <div>
+              <span class="text">Confirmation successfully completed!</span>
+            </div>
+          </div>
+        </div>
+        <div class="navbar">
+          <ul>
+            <li id="staffPage">
+              <div class="span">
+                <span class="page-number">1 </span>
+              </div>
+              Staff
+            </li>
+            <li class="servicePage">
+              <div class="span">
+                <span class="page-number">2 </span>
+              </div>
+              Service
+            </li>
+
+            <li id="dateTimePage">
+              <div class="span">
+                <span class="page-number">3 </span>
+              </div>
+              Date & time
+            </li>
+
+            <li id="confirmPage">
+              <div class="span">
+                <span class="page-number">4 </span>
+                <i class="fa fa-check page-icon" style="display: none"></i>
+              </div>
+              Confirmation
+            </li>
+          </ul>
+        </div>
+        <div class="pages">
+          <div class="selection">
+            <div>
+              <div class="select">
+                <p>Select staff</p>
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+
+              <div class="staff-list"></div>
+            </div>
+            <div>
+              <div class="select">
+                <p>Select service</p>
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="service-list"></div>
+            </div>
+            <div>
+              <div class="select">
+                <p>Select date & time</p>
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="total-date">
+                <div id="container">
+                  <div id="header">
+                    <div id="backButton1">&lt;</div>
+                    <div id="monthDisplay"></div>
+                    <div id="nextButton1">&gt;</div>
+                  </div>
+
+                  <div id="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                  </div>
+
+                  <div id="calendar"></div>
+                </div>
+                <div id="container2">
+                  <div id="header">
+                    <div id="monthDisplay">Time</div>
+                  </div>
+                  <div class="date">Select date</div>
+                  <div class="time">
+                    <div class="total-hours">
+                      <div class="hour hour-deactive">
+                        <p>
+                          09:00 <br />
+                          09:30
+                        </p>
+                      </div>
+                      <div class="hour hour-deactive">
+                        <p>
+                          09:30 <br />
+                          10:00
+                        </p>
+                      </div>
+                      <div class="hour hour-deactive">
+                        <p>
+                          10:00 <br />
+                          10:30
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="select">
+                <p>Confirm details</p>
+              </div>
+              <div class="inputs">
+                <div>
+                  <label for="">Name</label>
+                  <input type="text" />
+                </div>
+                <div>
+                  <label for="">Surname</label> <input type="text" required />
+                </div>
+                <div>
+                  <label for="">E-mail</label> <input type="email" required />
+                </div>
+                <div>
+                  <label for="">Phone</label> <input type="text" required />
+                </div>
+              </div>
+              <div class="total-info">
+                <p>Note</p>
+                <div id="note-info">
+                  <div id="belongtoStaff"></div>
+                  <div id="belongtoService"></div>
+                  <div id="belongtoDate"></div>
+                  <div id="belongtoMoney"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="buttons">
+            <button id="backButton">BACK</button>
+            <div class="not-total">
+              <div class="nots not-staff">
+                <i class="fa fa-circle-info"></i>
+                <span>SELECT STAFF</span>
+              </div>
+              <div class="nots not-service">
+                <i class="fa fa-circle-info"></i><span>SELECT SERVICE</span>
+              </div>
+              <div class="nots not-date">
+                <i class="fa fa-circle-info"></i>
+                <span>SELECT DATE & TIME</span>
+              </div>
+            </div>
+
+            <button id="nextButton">NEXT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
